@@ -30,11 +30,12 @@ function dec(n) {
   return n--;
 }
 
-function makeInt(n) {
-  return parseInt('n')
+function makeInt(n, base) {
+  var parsed = parseInt (n, base);
+  if (isNaN(parsed)) { return 0}
+  return parsed * 100;
 }
 
 function preserveDecimal(n) {
   return parseFloat(n);
 }
-
